@@ -3,6 +3,10 @@ import 'package:formvalidation/AppbarTabDemo.dart';
 import 'package:formvalidation/Introduction_Screen.dart';
 import 'package:formvalidation/carousel/carousel_demo.dart';
 import 'package:formvalidation/carousel/carousel_page.dart';
+import 'package:formvalidation/database_example/pages/homepage.dart';
+import 'package:formvalidation/database_example/pages/login_page.dart';
+import 'package:formvalidation/database_example/todolist/todo_form.dart';
+import 'package:formvalidation/database_example/todolist/todo_list.dart';
 import 'package:formvalidation/fileupload/file_picker_demo.dart';
 import 'package:formvalidation/fileupload/file_upload_demo.dart';
 import 'package:formvalidation/fileupload/image_file_demo.dart';
@@ -19,11 +23,15 @@ import 'package:formvalidation/navigationdrawerdemo/navigationdemo.dart';
 import 'package:formvalidation/navigationdrawerdemo/navigationdrawer.dart';
 import 'package:formvalidation/nestedtabdemo/NestedTabDemo.dart';
 import 'package:formvalidation/onboarding.dart';
+import 'package:formvalidation/rawjson/json_api_get.dart';
+import 'package:formvalidation/rawjson/json_demo.dart';
+import 'package:formvalidation/rawjson/json_server_demo.dart';
 import 'package:formvalidation/sharedPreference_demo/sharedpreference_demo.dart';
 
 import 'bottomnavigation/curvebuttonNavigation.dart';
 import 'data/TabChoice.dart';
 import 'fileupload/video_player_demo.dart';
+import 'localdatabase/database_demo.dart';
 import 'main.dart';
 
 class RouteGenerator {
@@ -32,7 +40,7 @@ class RouteGenerator {
 
     switch (routeSettings.name) {
       case '/':
-        return MaterialPageRoute(builder: (_) => SharePreferenceDemo());
+        return MaterialPageRoute(builder: (_) => TodoListPage());
         break;
 //      case NewPageState.routeName:
 //        if (routeSettings.name == NewPageState.routeName) {
@@ -43,11 +51,11 @@ class RouteGenerator {
 //                  ));
 //        }
 //        break;
-      case '/welcome':
-        return MaterialPageRoute(builder: (_) => WelcomePage());
+      case '/add':
+        return MaterialPageRoute(builder: (_) => TodoForm());
         break;
-      case '/home':
-        return MaterialPageRoute(builder: (_) => VisitingHome());
+      case '/todo_list':
+        return MaterialPageRoute(builder: (_) => TodoListPage());
         break;
 
       case NewPageState.routeName:

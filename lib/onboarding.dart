@@ -64,10 +64,10 @@ class OnboardindDemoState extends State<OnboardindDemo> {
                       child: currentIndex == 0 ? Text("") : Text("SKIP")),
                   Row(
                     children: <Widget>[
-                      for (int i = 0; i < slides.length; i++)
-                        currentIndex == i
-                            ? PageIndexIndicator(true)
-                            : PageIndexIndicator(false)
+//                      for (int i = 0; i < slides.length; i++)
+//                        currentIndex == i
+//                            ? PageIndexIndicator(true)
+//                            : PageIndexIndicator(false)
                     ],
                   ),
                   InkWell(
